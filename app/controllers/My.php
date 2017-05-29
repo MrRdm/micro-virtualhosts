@@ -30,7 +30,9 @@ class My extends ControllerBase{
 				
 				//A faire : ajouter virtualhosts
 				
-			
+				/*
+				
+				
 				<?php
 				mysql_connect("virtualhosts", "root", "root") or die(mysql_error( )) ;
 				mysql_select_db("ap") or exit(mysql_error( )) ;
@@ -44,7 +46,9 @@ class My extends ControllerBase{
 					
 				}
 				?>
-			
+				
+				
+				*/
 			
 			
 			

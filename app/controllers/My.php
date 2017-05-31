@@ -40,7 +40,7 @@ class My extends ControllerBase{
 				$vhosts=DAO::getAll("models\Virtualhost","idUser=".$user->getId());
 				
 				//Acceder au server des vhosts [NON FONCTIONNEL]
-				$vhosts_server=$vhosts->getServer();
+				//$vhosts_server=$vhosts->getServer();
 
 				//Permet de compiler
 				$this->jquery->compile($this->view);

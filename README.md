@@ -25,27 +25,27 @@ MVC PHP framework
 ## What's done :
 
 * TODO 1 -- My Services
- * - [x] Displaying Host
- * - [x] Displaying  all virtualhosts
- * - [ ] No buttons
+  * - [x] Displaying Host
+  * - [x] Displaying  all virtualhosts
+  * - [ ] No buttons
   
 * TODO 2 -- List of each Virtualhost per Host
- * - [ ] N/A
+  * - [ ] N/A
 
 * TODO 3 -- VirtualHost details
- * - [x] Displaying Virtualhost Information
- * - [x] Displaying  Virtualhost Properties (if they have some)
- * - [ ] No active or inactive property
+  * - [x] Displaying Virtualhost Information
+  * - [x] Displaying  Virtualhost Properties (if they have some)
+  * - [ ] No active or inactive property
 
 * TODO 4 -- Protecting the My controller
- * - [x] Done.
+  * - [x] Done.
   
 * TODO 5 -- Configuring
- * - [ ] Configuring virualhost
-  * - [x] Virtualhost Information configuring interface
-  * - [ ] Applying changes
- * - [ ] Generating or integrating conf file
- * - [ ] Restarting web service
+  * - [ ] Configuring virualhost
+   * - [x] Virtualhost Information configuring interface
+   * - [ ] Applying changes to the Database
+  * - [ ] Generating or integrating conf file
+  * - [ ] Restarting web service
 
 ## Installation :
 

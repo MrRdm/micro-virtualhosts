@@ -42,8 +42,8 @@ MVC PHP framework
   
 * TODO 5 -- Configuring
   * - [ ] Configuring virualhost
-   * - [x] Virtualhost Information configuring interface
-   * - [ ] Applying changes to the Database
+    * - [x] Virtualhost Information configuring interface
+    * - [ ] Applying changes to the Database
   * - [ ] Generating or integrating conf file
   * - [ ] Restarting web service
 

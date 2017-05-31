@@ -14,7 +14,32 @@
     <div class="eight wide column">
             <h3 class="ui header">
             Mes Virtualhosts
-            <div class="sub header">Hôtes virtuels sur serveurs mutualisés.</div>
+<h1>Members</h1>
+<!-- Utiliser twigg parcourir le tabelau paser dans la vue - mise en forme  -->
+<div class="sub header">Hôtes virtuels sur serveurs mutualisés.</div>
+<ul>
+    {% for vhost in tableau_vhosts %}
+        <h1 class="ui header">
+        <div class="sub header">{{ tableau_server }}</div>
+  <img class="ui massive rounded image" src="/micro-virtualhosts/public/img/virtualhost.png">
+  <div class="content">
+     [{{ vhost }}]
+    
+  </div>
+</h1>
+
+    {% endfor %}
+</ul>
+
+
+
+
+
+
+            
         </h3>
     </div>
 </div>
+
+
+

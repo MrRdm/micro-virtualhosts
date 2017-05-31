@@ -34,23 +34,31 @@ class My extends ControllerBase{
 			
 			
 			
-			
-			
-			
-			
 				//A faire : ajouter virtualhosts
+
+
+
+
+
+
+				//Acceder à tous les vhosts en focntion de l'userID passé en paramètre, utilise un des models pour acceder à un des virtuals hosts 
 				$vhosts=DAO::getAll("models\Virtualhost","idUser=".$user->getId());
-				/* var_dump($vhosts); */
 				
-			
-			
-			
-			
+				//Accede au servers des vhosts [NON FONCTIONNEL]
+				$vhosts_server=$vhosts->getServer();
+
+				//Permet de compiler
 				$this->jquery->compile($this->view);
+
+				//Permet de charger dans la vue les variables instanciées dans le contrôleur (cette page)
 				$this->loadView("My/index.html"
 						,array(
-						"tableau_vhost"=>$vhosts
+						"tableau_vhosts"=>$vhosts,
+						"tableau_server"=>$vhosts_server
+
+
 				) );
+			
 		}
 		
 		

@@ -31,7 +31,7 @@ class Login extends ControllerBase {
 		$message=$this->semantic->htmlMessage("error","Merci de vous connecter pour tester.");
 		$message->setIcon("announcement")->setError();
 		$message->setDismissable();
-		$message->addContent(Login::getInfoUser($this,"-login"));
+		$message->addContent(Auth::getInfoUser($this,"-login")); //Changé le Login:: en Auth::
 		echo $message;
 		echo $this->jquery->compile($this->view);
 	}

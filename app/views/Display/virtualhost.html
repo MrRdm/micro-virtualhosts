@@ -30,7 +30,7 @@
 <h1 class="ui header">
   <img class="ui massive rounded image" src="/micro-virtualhosts/public/img/virtualhost.png">
   <div class="content">
-    Vhost ID [{{ id_vhost }}]
+    Vhost ID [{{ vHost.Id }}]
     <div class="sub header">Informations sur l'h&ocircte virtuel</div>
   </div>
 </h1>
@@ -49,13 +49,13 @@
   <tbody>
     <tr>
       <td class="single line">
-        {{ id_serveur_vhost }}
+        {{ vHost.Server }}
       </td>
       <td class="single line">
-       {{ nom_vhost }}
+       {{ vHost.Name }}
       </td>
       <td>
-      <pre class='language-markup'><code>{{ config_vhost }}</code></pre>
+      <pre class='language-markup'><code>{{ vHost.Config }}</code></pre>
       </td>
     </tr>
   </tbody>

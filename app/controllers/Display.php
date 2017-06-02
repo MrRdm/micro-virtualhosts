@@ -1,8 +1,6 @@
 <?php
 namespace controllers;
-use libraries\Auth;
 use micro\orm\DAO;
-use Ajax\semantic\html\content\view\HtmlItem;
 use models\Virtualhost;
 
 class Display extends ControllerBase
@@ -16,21 +14,34 @@ class Display extends ControllerBase
 	
 	
 	
+	public function host ($idhost)
+	{
+		
+		
+		$host=DAO::getOne("models\Host","id=".$idhost);
+		$servers=DAO::getAll("models\Server","idHost=".$idhost);
+		$virtualhosts=DAO::getAll("models\Virtualhost");
+		
+		
+		
+		
+		
+		
+		
+		$this->jquery->compile($this->view);
+		
+		$this->loadView("Display/host.html"
+				,array(
+						"host"=>$host,
+						"servers"=>$servers,
+						"vHosts"=>$virtualhosts
+					   ) ); 
+		
+		
+		
+	}
 	
-/* TODO 2 */
 	
-	
-	
-	
-	
-	
-	
-	/*
-	 * 
-	 * 
-	 * /!\ Besoin de la variable $id_host contenant L'ID HOST /!\
-	 * 
-	 */
 	public function virtualhost ($idvirtualhost)
 	{
 		
@@ -48,13 +59,15 @@ class Display extends ControllerBase
 		
 		$this->loadView("Display/virtualhost.html"
 		,array(
-			"vHost"=>$vHost
+			"vHost"=>$vHost //Tableau contenant la conf du Vhost concerné
 			,"id_host"=>$id_host /*recuperer l'IDhost pour rediriger correctement l'utilisateur*/
-			,"vhps"=>$vHost_Propertys 
+				,"vhps"=>$vHost_Propertys //Tableau contenant les properties du Vhost concerné
 		)); 
 		
 			
 	}
+	
+	
 	
 	
 	
@@ -98,25 +111,44 @@ class Display extends ControllerBase
 				,array(
 						"id_vhost"=>$idvirtualhost
 				));
-
-
-
-
-
-
-
-
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		
 	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

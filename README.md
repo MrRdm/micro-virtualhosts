@@ -27,14 +27,14 @@ MVC PHP framework
 * TODO 1 -- My Services
   * - [x] Displaying Host
   * - [x] Displaying  all virtualhosts
-  * - [ ] No buttons
   
 * TODO 2 -- List of each Virtualhost per Host
-  * - [ ] N/A
+  * - [X] Displayed everything
+    * - [ ] buttons not working (yet..)
 
 * TODO 3 -- VirtualHost details
   * - [x] Displaying Virtualhost Information
-    * - [ ] syntax highlighting on the conf file
+    * - [ ]  bad syntax highlighting on the conf file
   * - [x] Displaying  Virtualhost Properties
 
 * TODO 4 -- Protecting the My controller
@@ -54,8 +54,23 @@ Clone and drop the project master file into the root of your web server
 ## Contributors :
 
 [Constantin Pavlovic](https://github.com/MrRdm/)
-&
+>TODO 2
+
+
+>TODO 3
+
+
+>TODO 5                                                                                                                 
+
+
+
+
 [Brandon Martin](https://github.com/martin01brandon)
+
+>TODO 1
+
+
+>TODO 4
 
 ## License :
 

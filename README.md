@@ -22,7 +22,7 @@ Small WebApp allowing a company and its clients to manage their own Web Applicat
 
 MVC PHP framework
 
-## What's done :
+## Project State:
 
 * TODO 1 -- My Services
   * - [x] Displaying Host

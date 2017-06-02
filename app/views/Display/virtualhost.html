@@ -17,9 +17,9 @@
 </a>
 
 
-<a href=Display/host/{{ id_host }}>
+<a href="Display/host/{{ id_host }} ">
 <div class="ui animated button" tabindex="0">
-  <div class="visible content">Retour &agrave; {{ id_serveur_vhost }}</div>
+  <div class="visible content">Retour &agrave; {{ vHost.Server }}</div>
   <div class="hidden content">
     <i class="right arrow icon"></i>
   </div>
@@ -36,7 +36,7 @@
 </h1>
 
 
-
+<!-- TABLEAU CONF -->
 
 <table class="ui celled padded table">
   <thead>
@@ -63,13 +63,7 @@
 
 
 
-
-
-
-
-
-
-
+<!-- TABLEAU PROPERTIES -->
 
 <table class="ui celled striped table">
   <thead>
@@ -78,50 +72,59 @@
       Propri&eacute;t&eacute;s de l'h&ocircte virtuel
     </th>
   </tr>
-  </thead>
+  <tr>
   
+   <th>
+      Nom
+    </th>
+    
+     <th>
+      Valeur
+    </th>
+    
+    <th>
+      Etat
+    </th>
+    
+  </tr>
+  </thead>
   <tbody>
 
-
-
-{%if vhP_value == "N/A" %}
-	<tr>
-      <td class="collapsing">
-        Doma&icircne
-      </td>
-      <td>{{ vhP_value }}</td>
-    </tr>
+  {% for property in vhps %}
     
     <tr>
+    
       <td>
-        Etat
+        {{ property.Property }}
       </td>
+      
       <td>
-	    <i class="radio icon"></i> Inactif     
+	    {{ property }}     
       </td>
+      
+      <td>
+	    {% if property.Active %}
+   			<i class="selected radio icon"></i>
+   		{% else %}
+   			<i class="radio icon"></i>
+		{% endif %}    
+      </td>
+      
     </tr>
     
-  
-  </tbody>
-  
-{% else %}
-  
-  
-  {% for key,value in vHost_prop %}
-    
-    <tr>
-      <td>
-        {{ key }}
-      </td>
-      <td>
-	    {{ value }}     
-      </td>
-    </tr>
     {% endfor %}
-    
-{% endif %}
-  
+	
+	</tbody>
+	
 </table>
+
+
+
+
+
+
+
+
 
 
 </body>

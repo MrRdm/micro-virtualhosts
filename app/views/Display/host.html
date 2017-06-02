@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Votre Host</title>
+</head>
+
+<body>
+
+<a href="/micro-virtualhosts/My">
+<div class="ui animated floated right button" tabindex="0" style="float: right;">
+  <div class="visible content">Retour &agrave; mes services</div>
+  <div class="hidden content">
+    <i class="left arrow icon"></i>
+  </div>
+</div>
+</a>
+
+
+
+		<div>
+		
+			<h1 class="ui header" > 
+		        <b> {{ host.Name }}  </b> 
+		        <p  class="sub header">Liste des h&ocirc;tes virtuels par serveur</p>
+	        </h1> 
+	        
+	        <img class="ui small image" src="/micro-virtualhosts/public/img/server_icon.png">
+	        
+		</div>
+  				
+  
+ 		
+	 
+		 {% for server in servers %}
+
+		<h2 class="ui header">
+			  <img class="ui massive image" src="/micro-virtualhosts/public/img/lone_server.png">
+			  <div class="content">
+			    	{{ server.Name }}
+			  </div>
+		</h2>
+		
+		<div class="ui very padded segment">
+		  
+		{% for vhost in vHosts %}
+		
+			{% if vhost.Server == server.Name %}
+	
+			
+			
+			<img class="ui avatar small image" src="/micro-virtualhosts/public/img/virtualhost.png">
+			
+			
+			<h3>{{ vhost.Name}}</h3>
+				
+			<div class="ui labeled buttons">
+			
+				
+			 
+				
+					
+				      
+					  <button class="ui button" >
+					  <form action="Display/virtualhost/{{ vhost.Id }}">
+					  		
+					  		
+					    	<i class="unhide large icon"></i>
+					    	
+					    		<h4> Voir </h4>
+					    		
+					  </form>
+					  </button>
+					  
+				
+					
+					  <button class="ui button">
+					  
+					  		<a href="Display/confvhost/{{ vhost.Id }}">
+					  		
+					    	<i class="configure large icon"></i>
+						    
+						    <h4>Configurer</h4>
+						    	
+						    </a>
+					  </button>
+					
+					
+					
+				
+					  <button class="ui button">
+					  
+					  		<a>
+					  		
+					    	<i class="refresh large icon"></i>
+						    
+						    <h4>Recharger</h4>
+						    	
+						    </a>
+					  </button>
+				   
+					     
+			</div>	
+			
+			<br>
+			<br>
+			<br>
+			<br>
+						
+
+			{% endif %}
+		
+		{% endfor %}
+			
+			
+		<div class="ui icon message">
+		
+		
+			<i class="plus icon"></i>
+		<a href="">
+			<div class="content">
+				<div class="header">
+				     Ajouter un virtualhost avec {{ server.Name }}
+				</div>
+			</div>
+		</a>
+		</div>	
+			
+		</div>
+
+ 		
+ 		{% endfor %}
+ 		
+ 		
+    	</div>
+
+
+</body>
+</html>

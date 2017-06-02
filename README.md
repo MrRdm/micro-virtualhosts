@@ -34,8 +34,8 @@ MVC PHP framework
 
 * TODO 3 -- VirtualHost details
   * - [x] Displaying Virtualhost Information
-  * - [x] Displaying  Virtualhost Properties (if they have some)
-  * - [ ] No active or inactive property
+    * - [ ] syntax highlighting on the conf file
+  * - [x] Displaying  Virtualhost Properties
 
 * TODO 4 -- Protecting the My controller
   * - [x] Done.

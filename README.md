@@ -20,7 +20,7 @@ Small WebApp allowing a company and its clients to manage their own Web Applicat
 
 ## How it works :
 
-MVC PHP framework
+MVC PHP framework / MySQL
 
 ## Project State:
 
@@ -29,8 +29,7 @@ MVC PHP framework
   * - [x] Displaying  all virtualhosts
   
 * TODO 2 -- List of each Virtualhost per Host
-  * - [X] Displayed everything
-    * - [ ] buttons not working (yet..)
+  * - [X] Done.
 
 * TODO 3 -- VirtualHost details
   * - [x] Displaying Virtualhost Information
@@ -49,7 +48,7 @@ MVC PHP framework
 
 ## Installation :
 
-Clone and drop the project master file into the root of your web server
+See Howto ; Clone and drop the project master file into the root of your web server ; Start your SQL server aswell
 
 ## Contributors :
 

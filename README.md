@@ -43,16 +43,23 @@ MVC PHP framework / MySQL
   * - [ ] Configuring virualhost
     * - [x] Virtualhost Information configuring interface
     * - [ ] Applying changes to the Database
-  * - [ ] Generating or integrating conf file
+  * - [ ] Generating and integrating conf file
   * - [ ] Restarting web service
 
 ## Installation :
 
-See Howto ; Clone and drop the project master file into the root of your web server ; Start your SQL server aswell
+See Howto
+
+
+Clone and drop the project master file into the root of your web server
+
+
+Start your SQL server and import the database located in :    /micro-virtualhosts/app/database/virtualhosts.sql
 
 ## Contributors :
 
 [Constantin Pavlovic](https://github.com/MrRdm/)
+
 >TODO 2
 
 
@@ -71,7 +78,7 @@ See Howto ; Clone and drop the project master file into the root of your web ser
 
 >TODO 4
 
-## License :
+## Licenses :
 
 [Micro-framework](http://api.kobject.net/micro-framework/)
 

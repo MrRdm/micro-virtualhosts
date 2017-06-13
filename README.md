@@ -25,8 +25,7 @@ MVC PHP framework / MySQL
 ## Project State:
 
 * TODO 1 -- My Services
-  * - [x] Displaying Host
-  * - [x] Displaying  all virtualhosts
+  * - [x] Done.
   
 * TODO 2 -- List of each Virtualhost per Host
   * - [X] Done.

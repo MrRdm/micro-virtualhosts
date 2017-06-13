@@ -20,7 +20,7 @@ class My extends ControllerBase{
 			$user=Auth::getUser();
 			$hosts=DAO::getAll("models\Host","idUser=".$user->getId());
 			
-	//permet d'affiche, obligé de l'appeler dans twig'
+	//Permet d'afficher, obligé de l'appeler dans twig
 			$hostsItems=$this->semantic->htmlItems("list-hosts");
 			$hostsItems->fromDatabaseObjects($hosts, function($host){
 				$item=new HtmlItem("");
@@ -34,10 +34,12 @@ class My extends ControllerBase{
 			
 	//TODO1
 		
-				//Acceder à tous les vhosts en fonction de l'userID passé en paramètres
-				//utilise un des models pour acceder à un des virtuals hosts 
-				//met das un variable tous les vhosts grâce à la fonction memebre presente dans le modèle virtualhost.php qui lui même va les chercher dans la database
-				// mais y a un paramètre idUser, que l'on applicuqe getID, pour avoir seulement ID du user (on choppe une donné de l'onjet user')
+					//Accéder à tous les vhosts en fonction de l'userID passé en paramètres
+					//Utilise un des models pour accéder à un des virtuals hosts 
+					//Met dans une variable tous les vhosts grâce à la fonction membre 
+				//presente dans le modèle virtualhost.php qui lui même va les chercher dans la base de données
+					// Mais il y a un paramètre idUser, que l'on applique à getID, pour avoir seulement ID du user,
+				//on va chercher une donnée de l'objet user
 				$vhosts=DAO::getAll("models\Virtualhost","idUser=".$user->getId());
 				
 
@@ -56,25 +58,30 @@ class My extends ControllerBase{
 		}
 		
 	//TODO4
-
-		/* PROTECTION DU CONTROLLEUR MY */
+	//PROTECTION DU CONTROLLER MY
 		
 		else 
 		{
-			//Utilisation de PHP-MVUI
-			//Pris dans le contrôler login
-			//pas obligé twing parce qu'on l'appel directement ici avec echo $message
-			//Créer un objet "message" et on lui applique la méthode semantic (pour dire utilise semanticui) et html message (permet de mettre "merci de vous connecter pour tester") 
+				//Utilisation de phpMv-UI
+				//Pris dans le contrôler login
+				//Pas obligé d'utiliser twing parce qu'on fait l'appel directement ici avec echo "$message"
+				//Créer un objet "message" et on lui applique la méthode semantic (pour dire utilise sementic-ui)
+			//et html message (permet de mettre "merci de vous connecter pour tester") 
 			$message=$this->semantic->htmlMessage("error","Merci de vous connecter pour tester.");
-			//rejoute l'icone au message affiché précedament avec la méthode setIcon créer par le grand dieu'
+
+				//Rajoute l'icône au message affiché précédement avec la méthode setIcon créer par Mr HERON'
 			$message->setIcon("announcement")->setError();
-			//Ajouter la croix en haut à gauche pour fermer la mesage percedement affiché
+
+				//Ajouter la croix en haut à gauche pour fermer la mesage précédement affiché
 			$message->setDismissable();
-			//permet d'ajouter le bouton pour le test, on a changé la librairie Login:: en Auth::
+
+				//Permet d'ajouter le bouton pour le test, on a changé la librairie Login:: en Auth::
+			//pour que cela focntionne
 			$message->addContent(Auth::getInfoUser($this,"-login"));
-			//Affichage de l'objet $message
+
+			//Affichage de l'objet "$message"
 			echo $message;
-			//Utilisation de Java pour pouvoir cliquer sur le bouton pour s'identifier'
+			//Utilisation de Java pour pouvoir cliquer sur le bouton pour s'identifier "connexion pour tests"
 			echo $this->jquery->compile($this->view);
 		}
 		

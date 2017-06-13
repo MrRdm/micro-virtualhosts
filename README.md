@@ -53,7 +53,7 @@ See Howto
 Clone and drop the project master file into the root of your web server
 
 
-Start your SQL server and import the database located in :    /micro-virtualhosts/app/database/virtualhosts.sql
+Start your SQL server and import the database located at :    /micro-virtualhosts/app/database/virtualhosts.sql
 
 ## Contributors :
 
